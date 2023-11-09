@@ -4,8 +4,8 @@ defined('ABSPATH') or die('This page may not be accessed directly.');
 
 /*
  * Plugin Name: UnoSignal (Marc's Version)
- * Plugin URI: https://onesignal.com/
- * Description: Free web push notifications.
+ * Plugin URI: https://github.com/marclucraft/unosignal
+ * Description: Free web push notifications, by OneSignal.
  * Version: 0.1
  * Author: Marc Lucraft
  * Author URI: https://github.com/marclucraft

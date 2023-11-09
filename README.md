@@ -5,10 +5,8 @@
   </picture>
 </p>
 
-# An unofficial OneSignal / WordPress Integration
-
-## Uno for Unofficial. Uno for One – ¡Ole![^1]
+# Uno for Unofficial. Uno for One – ¡Ole![^1]
 
 [^1]:
-    This plugin is not official, and is in no way affiliated to OneSignal.
+    This plugin is not official. I currently work at OneSignal, however this is in no way affiliated to OneSignal.
     If you're looking for the official plugin, go here: [OneSignal WordPress Plugin](https://wordpress.org/plugins/onesignal-free-web-push-notifications/)

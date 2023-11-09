@@ -4,9 +4,6 @@
     <img alt="UnoSignal Logo'" src="./light.png">
   </picture>
 </p>
+<h1 align="center">Uno for Unofficial. Uno for One – ¡Ole!</h1>
 
-# Uno for Unofficial. Uno for One – ¡Ole![^1]
-
-[^1]:
-    This plugin is not official. I currently work at OneSignal, however this is in no way affiliated to OneSignal.
-    If you're looking for the official plugin, go here: [OneSignal WordPress Plugin](https://wordpress.org/plugins/onesignal-free-web-push-notifications/)
+An unofficial OneSignal / WordPress Integration. I currently work at OneSignal, however this is in no way affiliated to OneSignal. If you're looking for the official plugin, go here: [OneSignal WordPress Plugin](https://wordpress.org/plugins/onesignal-free-web-push-notifications/)

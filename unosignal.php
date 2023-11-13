@@ -12,7 +12,7 @@ defined('ABSPATH') or die('This page may not be accessed directly.');
  * License: MIT
  */
 
-require_once plugin_dir_path(__FILE__) . '/onesignal-admin/onesignal-admin.php';
-require_once plugin_dir_path(__FILE__) . '/onesignal-init.php';
-require_once plugin_dir_path(__FILE__) . '/onesignal-metabox/onesignal-metabox.php';
-require_once plugin_dir_path(__FILE__) . '/onesignal-notification.php';
+require_once plugin_dir_path(__FILE__) . '/unosignal-admin/unosignal-admin.php';
+require_once plugin_dir_path(__FILE__) . '/unosignal-init.php';
+require_once plugin_dir_path(__FILE__) . '/unosignal-metabox/unosignal-metabox.php';
+require_once plugin_dir_path(__FILE__) . '/unosignal-notification.php';

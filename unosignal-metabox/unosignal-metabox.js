@@ -1,10 +1,10 @@
 console.log("It's Aliiiiive!");
 
 window.addEventListener('DOMContentLoaded', () => {
-	const sendPost = document.getElementById('os_update');
-	const optionsWrap = document.getElementById('os_options');
-	const customisePost = document.getElementById('os_customise');
-	const customiseWrap = document.getElementById('os_customisations');
+	const sendPost = document.getElementById('us_update');
+	const optionsWrap = document.getElementById('us_options');
+	const customisePost = document.getElementById('us_customise');
+	const customiseWrap = document.getElementById('us_customisations');
 	const customiseWrapChild = customiseWrap.querySelectorAll('input');
 
 	function setDisplay(elem, checked) {

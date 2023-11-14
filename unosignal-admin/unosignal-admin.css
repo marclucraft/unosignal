@@ -16,7 +16,7 @@
 	max-width: 300px;
 }
 
-.toplevel_page_unosignal-admin-page .us-content {
+.us-content {
 	padding: 60px;
 	font-size: 16px !important;
 	line-height: 1.5rem;
@@ -25,24 +25,24 @@
 		Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !important;
 }
 
-label {
+.us-content label {
 	color: rgb(66, 77, 87);
 	margin-bottom: 5px;
 	display: inline-block;
 }
 
-label:after {
+.us-content label:after {
 	content: '*';
 	font-size: 125%;
 	color: rgb(229, 75, 77);
 	margin-left: 3px;
 }
 
-label:last-of-type {
+.us-content label:last-of-type {
 	margin-top: 20px;
 }
 
-input[type='text'] {
+.us-content input[type='text'] {
 	display: block;
 	font-size: 16px;
 	height: 2.25rem;
@@ -54,8 +54,29 @@ input[type='text'] {
 	border: 1px solid rgb(203, 209, 215);
 }
 
-input[type='text']:active,
-input[type='text']:focus {
+.us-content input[type='text']:active,
+.us-content input[type='text']:focus {
 	border: 1px solid rgb(67, 70, 206);
 	background: rgb(236, 236, 252);
+}
+
+.us-content input[type='submit'] {
+	cursor: pointer;
+	padding: 0.5rem 0.75rem;
+	font-size: 1rem;
+	border-radius: 0.25rem;
+	background-color: rgb(67, 70, 206);
+	line-height: 1.125rem;
+	border: 1px solid rgb(58, 61, 179);
+	box-shadow: rgba(5, 27, 44, 0.16) 0px 1px 1px,
+		rgba(255, 255, 255, 0.05) 0px 1px 0px inset;
+	color: rgb(255, 255, 255) !important;
+}
+
+.us-content input[type='submit']:hover,
+.us-content input[type='submit']:active,
+.us-content input[type='submit']:focus {
+	background-color: rgb(58, 61, 179);
+	border-color: rgb(58, 61, 179);
+	color: rgb(255, 255, 255) !important;
 }

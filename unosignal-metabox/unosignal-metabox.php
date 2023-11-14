@@ -36,27 +36,27 @@ function unosignal_metabox($post)
   // Meta box content -> js file hides sections depending on whats checked.
 ?>
   <label for="us_update">
-    <input type="checkbox" name="us_update" id="us_update" <?php echo $post->us_meta['us_update'] == 'on' ? 'checked' : '' ?>>Send notification when post is published</label><br><br>
+    <input type="checkbox" name="us_update" id="us_update" <?php echo isset($post->us_meta['us_update']) && $post->us_meta['us_update'] == 'on' ? 'checked' : '' ?>>Send notification when post is published</label><br><br>
   <div id="us_options">
     <label for="us_segment">Send to segment</label><br>
     <select name="us_segment" id="us_segment">
       <option value="All">All</option>
       <?php
       for ($i = 0; $i < count($json->segments); $i++) {
-        $selected = $post->us_meta['us_segment'] === $json->segments[$i]->name ? 'selected' : '';
+        $selected = isset($post->us_meta['us_segment']) && $post->us_meta['us_segment'] === $json->segments[$i]->name ? 'selected' : '';
         echo '<option value="' . $json->segments[$i]->name . '"' . $selected . '>' . $json->segments[$i]->name . '</option>';
       }
       ?>
     </select> <br>
     <label for="us_customise"><br>
-      <input type="checkbox" name="us_customise" id="us_customise" <?php echo $post->us_meta['us_customise'] == 'on' ? 'checked' : '' ?>>Customise notification content</label><br><br>
-    <div id="us_customisations" style="display:none;">
+      <input type="checkbox" name="us_customise" id="us_customise" <?php echo isset($post->us_meta['us_customise']) && $post->us_meta['us_customise'] == 'on' ? 'checked' : '' ?>>Customize notification content</label><br><br>
+    <div id="us_customisations" style="<?php echo isset($post->us_meta['us_customise']) && $post->us_meta['us_customise'] == 'on' ? 'display:block;' : 'display:none;'; ?>">
       <label for="us_title">Notification title</label><br>
-      <input type="text" name="us_title" id="us_title" value="<?php echo esc_attr($post->us_meta['us_title']) ?>" disabled><br><br>
+      <input type="text" name="us_title" id="us_title" value="<?php echo esc_attr(isset($post->us_meta['us_title']) ? $post->us_meta['us_title'] : ''); ?>" disabled><br><br>
       <label for="us_content">Notification content</label><br>
-      <input type="text" name="us_content" id="us_content" value="<?php echo esc_attr($post->us_meta['us_content']) ?>" disabled><br><br>
+      <input type="text" name="us_content" id="us_content" value="<?php echo esc_attr(isset($post->us_meta['us_content']) ? $post->us_meta['us_content'] : ''); ?>" disabled><br><br>
       <label for=" us_image">Notification image</label><br>
-      <input type="file" name="us_image" id="us_image" value="<?php echo esc_attr($post->us_meta['us_image']) ?>" disabled>
+      <input type="file" name="us_image" id="us_image" value="<?php echo esc_attr(isset($post->us_meta['us_image']) ? $post->us_meta['us_image'] : ''); ?>" disabled>
     </div>
   </div>
 

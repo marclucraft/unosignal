@@ -16,6 +16,10 @@
 - ⏩ Automatically sends Push Notifications when a WordPress post goes live.
 - 🧑‍🤝‍🧑 Choose which [Segment](https://documentation.onesignal.com/docs/segmentation) should recieve notifications for each post.
 
-## Installation
+## Download
+- Click **Code** at the top right of this repository and select **Download ZIP**
+<img width="410" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/3a481294-2dd5-4deb-afb4-802ab5ddba9c">
+
+## Install
 
 ## Setup

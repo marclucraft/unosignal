@@ -18,7 +18,8 @@
 
 ## Download
 - Click **Code** at the top right of this repository and select **Download ZIP**
-<img width="410" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/3a481294-2dd5-4deb-afb4-802ab5ddba9c">
+<img width="410" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/b0a745bd-adda-49c3-bbd6-6a8f9e295d68">
+
 
 ## Install
 

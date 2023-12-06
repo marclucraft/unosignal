@@ -8,11 +8,22 @@ add_action('publish_post', 'unosignal_send_notification', 30);
 // Function to send a notification
 function unosignal_send_notification($post_id)
 {
-    // Get the post and set api params
+
+    // Get the post
     $post = get_post($post_id);
-    $title = $_POST['us_title'] ?: $post->post_title;
-    $content = $_POST['us_content'] ?: $post->post_content;
-    $segment = $_POST['us_segment'] ?: 'All';
+
+    // check if update is on.
+    $update = $_POST['us_update'] ?? '';
+
+    // do not send notification if not enabled
+    if (empty($update)) {
+        return;
+    }
+
+    // set api params
+    $title = $_POST['us_title'] ?? $post->post_title;
+    $content = $_POST['us_content'] ?? $post->post_content;
+    $segment = $_POST['us_segment'] ?? 'All';
 
     $args = array(
         'headers' => array(

@@ -12,14 +12,15 @@
 </p>
 
 ## Overview
-- 🚀 Initialises the latest OneSignal Web SDK (v16)
-- ⏩ Automatically sends Push Notifications when a WordPress post goes live.
+
+- 🚀 Initialises the latest OneSignal Web SDK (v16).
+- ⏩ Automatically sends Push Notifications when a WordPress post is published.
 - 🧑‍🤝‍🧑 Choose which [Segment](https://documentation.onesignal.com/docs/segmentation) should recieve notifications for each post.
 
 ## Download
-- Click **Code** at the top right of this repository and select **Download ZIP**
-<img width="410" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/b0a745bd-adda-49c3-bbd6-6a8f9e295d68">
 
+- Click **Code** at the top right of this repository and select **Download ZIP**
+  <img width="410" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/b0a745bd-adda-49c3-bbd6-6a8f9e295d68">
 
 ## Install
 

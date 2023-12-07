@@ -1,5 +1,3 @@
-console.log("It's Aliiiiive!");
-
 window.addEventListener('DOMContentLoaded', () => {
 	const sendPost = document.getElementById('us_update');
 	const optionsWrap = document.getElementById('us_options');

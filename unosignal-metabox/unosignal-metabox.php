@@ -36,9 +36,9 @@ function unosignal_metabox($post)
   // Meta box content -> js file hides sections depending on whats checked.
 ?>
   <label for="us_update">
-    <input type="checkbox" name="us_update" id="us_update" <?php echo isset($post->us_meta['us_update']) && $post->us_meta['us_update'] == 'on' ? 'checked' : '' ?>>Send notification when post is published</label><br><br>
+    <input type="checkbox" name="us_update" id="us_update" <?php echo isset($post->us_meta['us_update']) && $post->us_meta['us_update'] == 'on' ? 'checked' : '' ?>>Send notification when post is published</label>
   <div id="us_options">
-    <label for="us_segment">Send to segment</label><br>
+    <label for="us_segment">Send to segment</label>
     <select name="us_segment" id="us_segment">
       <option value="All">All</option>
       <?php
@@ -47,16 +47,14 @@ function unosignal_metabox($post)
         echo '<option value="' . $json->segments[$i]->name . '"' . $selected . '>' . $json->segments[$i]->name . '</option>';
       }
       ?>
-    </select> <br>
-    <label for="us_customise"><br>
-      <input type="checkbox" name="us_customise" id="us_customise" <?php echo isset($post->us_meta['us_customise']) && $post->us_meta['us_customise'] == 'on' ? 'checked' : '' ?>>Customize notification content</label><br><br>
+    </select>
+    <label for="us_customise">
+      <input type="checkbox" name="us_customise" id="us_customise" <?php echo isset($post->us_meta['us_customise']) && $post->us_meta['us_customise'] == 'on' ? 'checked' : '' ?>>Customize notification content</label>
     <div id="us_customisations" style="<?php echo isset($post->us_meta['us_customise']) && $post->us_meta['us_customise'] == 'on' ? 'display:block;' : 'display:none;'; ?>">
-      <label for="us_title">Notification title</label><br>
-      <input type="text" name="us_title" id="us_title" value="<?php echo esc_attr(isset($post->us_meta['us_title']) ? $post->us_meta['us_title'] : ''); ?>" disabled><br><br>
-      <label for="us_content">Notification content</label><br>
-      <input type="text" name="us_content" id="us_content" value="<?php echo esc_attr(isset($post->us_meta['us_content']) ? $post->us_meta['us_content'] : ''); ?>" disabled><br><br>
-      <label for=" us_image">Notification image</label><br>
-      <input type="file" name="us_image" id="us_image" value="<?php echo esc_attr(isset($post->us_meta['us_image']) ? $post->us_meta['us_image'] : ''); ?>" disabled>
+      <label for="us_title">Notification title</label>
+      <input type="text" name="us_title" id="us_title" value="<?php echo esc_attr(isset($post->us_meta['us_title']) ? $post->us_meta['us_title'] : ''); ?>" disabled>
+      <label for="us_content">Notification content</label>
+      <input type="text" name="us_content" id="us_content" value="<?php echo esc_attr(isset($post->us_meta['us_content']) ? $post->us_meta['us_content'] : ''); ?>" disabled>
     </div>
   </div>
 
@@ -69,7 +67,8 @@ add_action('admin_print_styles-post-new.php', 'unosignal_meta_files');
 
 function unosignal_meta_files()
 {
-  wp_enqueue_script('unosignal_metabox', plugins_url('unosignal-metabox.js', __FILE__));
+  wp_enqueue_script('unosignal_metabox_js', plugins_url('unosignal-metabox.js', __FILE__));
+  wp_enqueue_style('unosignal_metabox_css', plugins_url('unosignal-metabox.css', __FILE__), array(), time());
 }
 
 
@@ -84,8 +83,7 @@ function unosignal_save_meta($post_id)
     'us_segment',
     'us_customise',
     'us_title',
-    'us_content',
-    'us_image',
+    'us_content'
   ];
 
   $meta_values = array();

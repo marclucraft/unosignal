@@ -17,6 +17,7 @@ function register_unosignal_settings()
 {
   register_setting('unosignal_settings_group', 'unosignal_app_id');
   register_setting('unosignal_settings_group', 'unosignal_rest_api_key');
+  register_setting('unosignal_settings_group', 'unosignal_send_to_mobile');
 }
 
 // Load style for page
@@ -35,38 +36,26 @@ function unosignal_admin_page()
   <header><img src="<?php echo plugins_url('/images/unosignal.svg', __FILE__); ?>"></header>
   <div class="us-content">
     <h2>Settings</h2>
-    <form method="POST" action="<?php echo admin_url('options.php'); ?>" onsubmit="return validateForm();">
+    <form method="POST" action="<?php echo admin_url('options.php'); ?>">
       <?php settings_fields('unosignal_settings_group'); ?>
       <?php do_settings_sections('unosignal_settings_group'); ?>
       <label for="appid">OneSignal App ID</label>
-      <input type="text" id="appid" name="unosignal_app_id" />
-      <p>
-        <?php
-        $appID = esc_attr(get_option('unosignal_app_id'));
-        if (!empty($appID)) {
-          echo '✅ ' . $appID;
-        } else {
-          echo '❌ Please enter your OneSignal App ID';
-        }
-        ?>
-      </p>
+      <input type="text" id="appid" name="unosignal_app_id" value="<?php echo esc_attr(get_option('unosignal_app_id')); ?>" />
       <label for="apikey">OneSignal REST API Key </label>
-      <input type="text" id="apikey" name="unosignal_rest_api_key" />
-      <p>
-        <?php
-        $apiKey = esc_attr(get_option('unosignal_rest_api_key'));
-        if (!empty($apiKey)) {
-          // Get the last four characters
-          $lastFour = substr($apiKey, -4);
-          // Hide the rest of the key with asterisks
-          $hiddenKey = str_repeat('*', strlen($apiKey) - 4) . $lastFour;
-
-          echo '✅ ' . $hiddenKey;
-        } else {
-          echo '❌ Please enter your REST API Key';
-        }
-        ?>
-      </p>
+      <input type="text" id="apikey" name="unosignal_rest_api_key" value="<?php echo esc_attr(get_option('unosignal_rest_api_key')); ?>" />
+      <div class="checkbox-wrapper">
+        <label for="send-to-mobile">
+          <input id="send-to-mobile" type="checkbox" name="unosignal_send_to_mobile" <?php echo get_option('unosignal_send_to_mobile') && get_option('unosignal_send_to_mobile') == 'on' ? 'checked' : '' ?>>
+          <span class="checkbox"></span>
+          Send notification to Mobile app subscribers
+        </label>
+        <div class="more-information" aria-label="More information"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor">
+            <g fill="currentColor">
+              <path d="M8 0a8 8 0 108 8 8.009 8.009 0 00-8-8zm0 12.667a1 1 0 110-2 1 1 0 010 2zm1.067-4.054a.667.667 0 00-.4.612.667.667 0 01-1.334 0 2 2 0 011.2-1.834A1.333 1.333 0 106.667 6.17a.667.667 0 01-1.334 0 2.667 2.667 0 113.734 2.444z"></path>
+            </g>
+          </svg>
+        </div>
+      </div>
       <?php submit_button(); ?>
     </form>
   </div>

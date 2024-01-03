@@ -35,10 +35,27 @@ function unosignal_send_notification($post_id)
             'app_id' => get_option('unosignal_app_id'),
             'headings' => array('en' => $title),
             'contents' => array('en' => wp_strip_all_tags($content)),
-            'url' => get_permalink($post_id),
             'included_segments' => array($segment),
+            'web_push_topic' => str_replace(' ', '-', strtolower($segment)),
+            'isAnyWeb' => true,
         )),
     );
+
+    // Conditionally include mobile parameters
+    $body = json_decode($args['body'], true);
+    if (get_option('unosignal_send_to_mobile') && get_option('unosignal_send_to_mobile') == 'on') {
+        $body['isIos'] = true;
+        $body['isAndroid'] = true;
+        $body['isHuawei'] = true;
+        $body['isWP_WNS'] = true;
+        if (!empty($_POST['us_mobile_url'])) {
+            $body['app_url'] = $_POST['us_mobile_url'];
+            $body['web_url'] = get_permalink($post_id);
+        }
+    } else {
+        $body['url'] = get_permalink($post_id);
+    }
+    $args['body'] = json_encode($body);
 
     // Make the API request and log errors
     if (defined('REST_REQUEST') && REST_REQUEST) return;

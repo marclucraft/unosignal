@@ -16,6 +16,8 @@
 - 🚀 Initialises the latest OneSignal Web SDK (v16).
 - ⏩ Automatically sends Push Notifications when a WordPress post is published.
 - 🧑‍🤝‍🧑 Choose which [Segment](https://documentation.onesignal.com/docs/segmentation) should recieve notifications for each post.
+- 📑 [Web Topics](https://documentation.onesignal.com/docs/web-push-topic-collapsing) included by default.
+- 📲 Send to mobile app subscribers, and option to direct them to a different URL ([Deep Link](https://documentation.onesignal.com/docs/links#deep-linking)).
 
 ## Download
 

@@ -48,6 +48,7 @@ function unosignal_metabox($post)
       }
       ?>
     </select>
+    <hr>
     <label for="us_customise">
       <input type="checkbox" name="us_customise" id="us_customise" <?php echo isset($post->us_meta['us_customise']) && $post->us_meta['us_customise'] == 'on' ? 'checked' : '' ?>>Customize notification content</label>
     <div id="us_customisations" style="<?php echo isset($post->us_meta['us_customise']) && $post->us_meta['us_customise'] == 'on' ? 'display:block;' : 'display:none;'; ?>">
@@ -55,7 +56,15 @@ function unosignal_metabox($post)
       <input type="text" name="us_title" id="us_title" value="<?php echo esc_attr(isset($post->us_meta['us_title']) ? $post->us_meta['us_title'] : ''); ?>" disabled>
       <label for="us_content">Notification content</label>
       <input type="text" name="us_content" id="us_content" value="<?php echo esc_attr(isset($post->us_meta['us_content']) ? $post->us_meta['us_content'] : ''); ?>" disabled>
+      <?php if (get_option('unosignal_send_to_mobile') == 'on') : ?>
+        <hr>
+        <label for="us_mobile_url">Mobile URL</label>
+        <input type="text" name="us_mobile_url" id="us_mobile_url" value="<?php echo esc_attr(isset($post->us_meta['us_mobile_url']) ? $post->us_meta['us_mobile_url'] : ''); ?>" disabled>
+      <?php endif; ?>
+
+
     </div>
+
   </div>
 
 <?php
@@ -83,7 +92,8 @@ function unosignal_save_meta($post_id)
     'us_segment',
     'us_customise',
     'us_title',
-    'us_content'
+    'us_content',
+    'us_mobile_url'
   ];
 
   $meta_values = array();

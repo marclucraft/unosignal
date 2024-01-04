@@ -63,6 +63,8 @@
    <img width="774" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/5c73c1d6-af68-4cd3-a63d-6a98dfdd5e9f">
 
 ## Sending notifications
+<img width="307" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/176a1961-ac64-422e-81df-df63f32d4df9">
+
 
 - Whilst creating a Post in WordPress, you should see a metabox for **OneSignal Push Notifications**.
 - Check **Send notification when post is published**, and choose the [Segment](https://documentation.onesignal.com/docs/segmentation) you'd like to target.
@@ -71,6 +73,7 @@
 - When you Publish the post, a notification will be sent.
 
 ### Sending to mobile app subscribers.
+
 
 - If you also have a mobile app setup in OneSignal, that separate to your Website, you can switch on **Send notification to Mobile app subscribers** This will include subscribers from your Mobile app in the notification send.
 - In the **OneSignal Push Notifications** metabox, you can choose a different URL for your Mobile app subscribers ([Deep Link](https://documentation.onesignal.com/docs/links#deep-linking)) – If you do not include a different URL, it will direct them to your Website (via a WebView in your app), rather than a specific page of your app.

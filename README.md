@@ -54,7 +54,10 @@
 4. Where it asks for **Main service worker filename** and **Updater service worker filename**, enter `OneSignalSDKWorker.js` (screenshot below).
 5. Save the Settings page. You'll be directed to a new page with **Upload Files** and **Add Code to Site**, ignore this and click **Finish** at the bottom of the page.
 
-### UnoSignal WordPress Settings
+<img width="410" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/775a9ce2-5edb-486e-8123-ec6f48a161a2">
+
+
+### UnoSignal WordPress Pluging Settings
 
 1. Enter the OneSignal App Id and REST API Key ([Keys and IDs](https://documentation.onesignal.com/docs/keys-and-ids)).
 2. Save Changes

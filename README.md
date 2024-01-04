@@ -15,9 +15,10 @@
 
 - 🚀 Initialises the latest OneSignal Web SDK (v16).
 - ⏩ Automatically sends Push Notifications when a WordPress post is published.
+- 💬 Setup [prompts](https://documentation.onesignal.com/docs/permission-requests) within the OneSignal dashboard. No custom code required.
 - 🧑‍🤝‍🧑 Choose which [Segment](https://documentation.onesignal.com/docs/segmentation) should recieve notifications for each post.
 - 📑 [Web Topics](https://documentation.onesignal.com/docs/web-push-topic-collapsing) included by default.
-- 📲 Send to mobile app subscribers, and option to direct them to a different URL ([Deep Link](https://documentation.onesignal.com/docs/links#deep-linking)).
+- 📲 Send to mobile app subscribers, with an option to direct them to a different URL ([Deep Link](https://documentation.onesignal.com/docs/links#deep-linking)).
 
 ## Download
 
@@ -27,15 +28,14 @@
 ## Install
 
 - In your WordPress admin screen, click **Plugins** -> **Add New Plugin** -> **Upload Plugin** -> **Choose file** <br/>
-  <img width="774" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/ea2d2db9-cf71-4bca-a846-776c9d924e50">
+  <img width="774" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/ea2d2db9-cf71-4bca-a846-776c9d924e50" style="margin-bottom:30px">
 - Choose **onesignal-main.zip** and click **Open** <br/>
-  <img width="774" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/8d482e66-81ee-40b5-a851-961a94a64163">
+  <img width="774" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/8d482e66-81ee-40b5-a851-961a94a64163" style="margin-bottom:30px">
 - Click **Install Now** <br/>
-  <img width="470" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/533cce31-d7b4-4a99-a8c7-1d91f8cbb9aa">
+  <img width="470" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/533cce31-d7b4-4a99-a8c7-1d91f8cbb9aa" style="margin-bottom:30px">
 - Click **Activate Plugin** <br/>
-  <img width="774" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/b1b94bf4-d2e4-4a74-87b0-567cf47ccf1b">
-- You're done, and should see UnoSignal in your admin menu <br/>
-  <img width="188" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/ff6951f0-fda9-4194-853a-66fd03686049">
-
+  <img width="774" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/b1b94bf4-d2e4-4a74-87b0-567cf47ccf1b" style="margin-bottom:30px">
+- You're done, and should see **UnoSignal** in your admin menu <br/>
+  <img width="188" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/ff6951f0-fda9-4194-853a-66fd03686049" style="margin-bottom:30px">
 
 ## Setup

@@ -41,8 +41,10 @@ function unosignal_send_notification($post_id)
         )),
     );
 
-    // Conditionally include mobile parameters
+
     $body = json_decode($args['body'], true);
+
+    // Conditionally include mobile parameters
     if (get_option('unosignal_send_to_mobile') && get_option('unosignal_send_to_mobile') == 'on') {
         $body['isIos'] = true;
         $body['isAndroid'] = true;
@@ -55,6 +57,18 @@ function unosignal_send_notification($post_id)
     } else {
         $body['url'] = get_permalink($post_id);
     }
+    // Set notification images
+    if (has_post_thumbnail($post_id)) {
+        $post_thumbnail_id = get_post_thumbnail_id($post_id);
+        // Higher resolution (2x retina, + a little more) for the notification small icon
+        $thumbnail_sized_images_array = wp_get_attachment_image_src($post_thumbnail_id, array(192, 192), true);
+        // Much higher resolution for the notification large image
+        $large_sized_images_array = wp_get_attachment_image_src($post_thumbnail_id, 'large', true);
+        $body['firefox_icon'] =  $thumbnail_sized_images_array[0];
+        $body['chrome_web_icon'] =  $thumbnail_sized_images_array[0];
+        $body['chrome_web_image'] = $large_sized_images_array[0];
+    }
+
     $args['body'] = json_encode($body);
 
     // Make the API request and log errors

@@ -39,3 +39,22 @@
   <img width="188" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/ff6951f0-fda9-4194-853a-66fd03686049" style="margin-bottom:30px">
 
 ## Setup
+
+### Requirements
+
+- A [OneSignal account](https://dashboard.onesignal.com/signup).
+- A [OneSignal app](https://documentation.onesignal.com/docs/web-push-quickstart), with Web Platform enabled.
+- The OneSignal App Id and REST API Key ([Keys and IDs](https://documentation.onesignal.com/docs/keys-and-ids)).
+
+### OneSignal.com
+
+1. On the Web Platform configuration page, choose **Typical Site Setup**
+2. On the **Typical Site Setup** screen, under Advanced Push Settings, switch on **Customize service worker paths and filenames**
+3. Where it asks for **Path to service worker files** and **Service worker registration scope**, enter `/wp-content/plugins/unosignal/service_worker/` (screenshot below).
+4. Where it asks for **Main service worker filename** and **Updater service worker filename**, enter `OneSignalSDKWorker.js` (screenshot below).
+5. Save the Settings page. You'll be directed to a new page with **Upload Files** and **Add Code to Site**, ignore this and click **Finish** at the bottom of the page.
+
+### UnoSignal WordPress Settings
+
+1. Enter the OneSignal App Id and REST API Key ([Keys and IDs](https://documentation.onesignal.com/docs/keys-and-ids)).
+2. Save Changes

@@ -11,10 +11,11 @@ function unosignal_admin_menu()
 }
 
 // Load style for page
-add_action('admin_print_styles', 'admin_styles');
+add_action('admin_enqueue_scripts', 'admin_files');
 
-function admin_styles()
+function admin_files()
 {
+  wp_enqueue_script('unosignal_admin_js', plugins_url('unosignal-admin.js', __FILE__));
   wp_enqueue_style('style', plugins_url('unosignal-admin.css', __FILE__), array(), time());
 }
 
@@ -74,14 +75,18 @@ function unosignal_admin_page()
           <span class="checkbox"></span>
           Send notification to Mobile app subscribers
         </label>
-        <div class="more-information" aria-label="More information"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor">
+        <div class="help" aria-label="More information"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor">
             <g fill="currentColor">
               <path d="M8 0a8 8 0 108 8 8.009 8.009 0 00-8-8zm0 12.667a1 1 0 110-2 1 1 0 010 2zm1.067-4.054a.667.667 0 00-.4.612.667.667 0 01-1.334 0 2 2 0 011.2-1.834A1.333 1.333 0 106.667 6.17a.667.667 0 01-1.334 0 2.667 2.667 0 113.734 2.444z"></path>
             </g>
           </svg>
         </div>
-      </div>
-      <?php submit_button(); ?>
+        <div class="information" style="display: none;">
+          <p>If you also have a mobile app setup in OneSignal, that's separate to your Website, this will include subscribers from your Mobile app in notification sends.</p>
+          <p>You can choose a different URL(<a href="https://documentation.onesignal.com/docs/links#deep-linking">Deep Link</a>) for your Mobile app subscribers in the Post metabox.
+          <p>If you do not include a different URL, it will direct them to your Website (via a WebView in your app), rather than a specific page of your app.</p>
+        </div>
+        <?php submit_button(); ?>
     </form>
   </div>
 <?php

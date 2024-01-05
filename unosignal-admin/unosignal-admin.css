@@ -70,6 +70,8 @@
 	width: 0px !important;
 	height: 0px;
 	margin: 0px;
+	min-width: unset !important;
+	border: unset !important;
 }
 
 .us-content .checkbox {
@@ -105,7 +107,7 @@
 	background-color: rgb(67, 70, 206);
 }
 
-.us-content .more-information {
+.us-content .help {
 	min-width: 16px;
 	width: 16px;
 	height: 16px;
@@ -115,6 +117,15 @@
 	display: inline-block;
 	vertical-align: -2px;
 	margin-left: 10px;
+	cursor: pointer;
+}
+
+.us-content .information {
+	box-shadow: rgba(5, 27, 44, 0.12) 0px 1px 6px -1px, rgba(5, 27, 44, 0.08) 0px 6px 18px -4px;
+	border-radius: 0.25rem;
+	border: 1px solid rgb(185, 194, 202);
+	padding: 1rem 2rem 1rem 1rem;
+	background-color: #fff;
 }
 
 .us-content input[type='submit'] {

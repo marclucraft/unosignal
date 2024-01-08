@@ -74,5 +74,5 @@
 ### Sending to mobile app subscribers.
 
 - If you also have a mobile app setup in OneSignal, that's separate to your Website, you can switch on **Send notification to Mobile app subscribers** (in the plugin settings screen). This will include subscribers from your Mobile app in the notification send.
-- In the **OneSignal Push Notifications** metabox, you can choose a different URL for your Mobile app subscribers ([Deep Link](https://documentation.onesignal.com/docs/links#deep-linking)) – If you do not include a different URL, it will direct them to your Website (via a WebView in your app), rather than a specific page of your app. <br/><br/>
+- In the **OneSignal Push Notifications** metabox, you can choose a different URL for your Mobile app subscribers ([Deep Link](https://documentation.onesignal.com/docs/links#deep-linking)) – If you do not include a different URL, it will direct them to your Website, rather than a specific page of your app. <br/><br/>
   <img width="448" alt="image" src="https://github.com/marclucraft/unosignal/assets/3025406/c3dbb0cc-4297-490a-aab4-96120e7570df">

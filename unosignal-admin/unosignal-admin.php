@@ -84,7 +84,7 @@ function unosignal_admin_page()
         <div class="information" style="display: none;">
           <p>If you also have a mobile app setup in OneSignal, that's separate to your Website, this will include subscribers from your Mobile app in notification sends.</p>
           <p>You can choose a different URL(<a href="https://documentation.onesignal.com/docs/links#deep-linking">Deep Link</a>) for your Mobile app subscribers in the Post metabox.
-          <p>If you do not include a different URL, it will direct them to your Website (via a WebView in your app), rather than a specific page of your app.</p>
+          <p>If you do not include a different URL, it will direct them to your Website, rather than a specific page of your app.</p>
         </div>
         <?php submit_button(); ?>
     </form>

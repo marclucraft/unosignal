@@ -21,8 +21,8 @@ function unosignal_send_notification($post_id)
     }
 
     // set api params
-    $title = $_POST['us_title'] ?? $post->post_title;
-    $content = $_POST['us_content'] ?? $post->post_content;
+    $title = !empty($_POST['us_title']) ? $_POST['us_title'] : $post->post_title;
+    $content = !empty($_POST['us_content']) ? $_POST['us_content'] : $post->post_content;
     $segment = $_POST['us_segment'] ?? 'All';
 
     $args = array(
@@ -53,6 +53,8 @@ function unosignal_send_notification($post_id)
         if (!empty($_POST['us_mobile_url'])) {
             $body['app_url'] = $_POST['us_mobile_url'];
             $body['web_url'] = get_permalink($post_id);
+        } else {
+            $body['url'] = get_permalink($post_id);
         }
     } else {
         $body['url'] = get_permalink($post_id);

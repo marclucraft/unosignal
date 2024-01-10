@@ -56,15 +56,12 @@ function unosignal_metabox($post)
       <input type="text" name="us_title" id="us_title" value="<?php echo esc_attr(isset($post->us_meta['us_title']) ? $post->us_meta['us_title'] : ''); ?>" disabled>
       <label for="us_content">Notification content</label>
       <input type="text" name="us_content" id="us_content" value="<?php echo esc_attr(isset($post->us_meta['us_content']) ? $post->us_meta['us_content'] : ''); ?>" disabled>
-      <?php if (get_option('unosignal_send_to_mobile') == 'on') : ?>
-        <hr>
-        <label for="us_mobile_url">Mobile URL</label>
-        <input type="text" name="us_mobile_url" id="us_mobile_url" value="<?php echo esc_attr(isset($post->us_meta['us_mobile_url']) ? $post->us_meta['us_mobile_url'] : ''); ?>" disabled>
-      <?php endif; ?>
-
-
     </div>
-
+    <?php if (get_option('unosignal_send_to_mobile') == 'on') : ?>
+      <hr>
+      <label for="us_mobile_url">Mobile URL</label>
+      <input type="text" name="us_mobile_url" id="us_mobile_url" value="<?php echo esc_attr(isset($post->us_meta['us_mobile_url']) ? $post->us_meta['us_mobile_url'] : ''); ?>" disabled>
+    <?php endif; ?>
   </div>
 
 <?php

@@ -27,7 +27,7 @@ function unosignal_send_notification($post_id)
 
     $args = array(
         'headers' => array(
-            'Authorization' => 'Bearer ' . get_option('unosignal_rest_api_key'),
+            'Authorization' => 'Basic ' . get_option('unosignal_rest_api_key'),
             'accept' => 'application/json',
             'content-type' => 'application/json',
         ),
